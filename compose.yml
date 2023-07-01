@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    image: 'my-next-app'
+    build:
+      context: 'app'
+  reverse-proxy:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./reverse-proxy/app-proxy.conf:/etc/nginx/conf.d/default.conf
