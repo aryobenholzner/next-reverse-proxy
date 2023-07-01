@@ -1,4 +1,5 @@
 import styles from './page.module.scss';
+import Link from "next/link";
 
 export default async function Index() {
   /*
@@ -15,6 +16,7 @@ export default async function Index() {
               <span> Hello there, </span>
               Welcome next-app 👋
             </h1>
+            <Link href={'/sub-page'}>Link to next page</Link>
           </div>
 
           <div id="hero" className="rounded">
